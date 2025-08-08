@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nokssss Browser</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="browser-window">
+        <!-- Заголовочная панель -->
+        <div class="title-bar">
+            <div class="window-controls">
+                <button class="control-btn minimize"></button>
+                <button class="control-btn maximize"></button>
+                <button class="control-btn close"></button>
+            </div>
+        </div>
+
+        <!-- Панель вкладок -->
+        <div class="tab-bar">
+            <div class="tabs-container">
+                <div class="tab active">
+                    <span class="tab-icon">🌐</span>
+                    <span class="tab-title">Новая вкладка</span>
+                    <button class="tab-close">×</button>
+                </div>
+                <div class="tab">
+                    <span class="tab-icon">📄</span>
+                    <span class="tab-title">nokssss - Главная</span>
+                    <button class="tab-close">×</button>
+                </div>
+            </div>
+            <button class="new-tab-btn">+</button>
+        </div>
+
+        <!-- Панель навигации -->
+        <div class="navigation-bar">
+            <div class="nav-buttons">
+                <button class="nav-btn back" title="Назад">←</button>
+                <button class="nav-btn forward" title="Вперед">→</button>
+                <button class="nav-btn refresh" title="Обновить">⟳</button>
+                <button class="nav-btn home" title="Домой">🏠</button>
+            </div>
+            
+            <div class="address-bar-container">
+                <div class="security-indicator">🔒</div>
+                <input type="text" class="address-bar" placeholder="Поиск или адрес" value="https://nokssss.com">
+                <button class="bookmark-btn">⭐</button>
+            </div>
+
+            <div class="browser-controls">
+                <button class="control-btn downloads" title="Загрузки">📥</button>
+                <button class="control-btn bookmarks" title="Закладки">📚</button>
+                <button class="control-btn history" title="История">🕒</button>
+                <button class="control-btn menu" title="Меню">☰</button>
+            </div>
+        </div>
+
+        <!-- Основная область контента -->
+        <div class="content-area">
+            <div class="start-page">
+                <div class="logo-container">
+                    <div class="browser-logo">
+                        <div class="logo-circle">
+                            <span class="logo-text">nokssss</span>
+                        </div>
+                    </div>
+                    <h1 class="welcome-title">Добро пожаловать в nokssss</h1>
+                    <p class="welcome-subtitle">Быстрый, безопасный и приватный браузер</p>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" class="main-search" placeholder="Поиск в интернете или введите адрес">
+                    <button class="search-btn">Поиск</button>
+                </div>
+
+                <div class="quick-access">
+                    <h3>Быстрый доступ</h3>
+                    <div class="shortcuts-grid">
+                        <div class="shortcut-card">
+                            <div class="shortcut-icon">🌐</div>
+                            <span>Google</span>
+                        </div>
+                        <div class="shortcut-card">
+                            <div class="shortcut-icon">📺</div>
+                            <span>YouTube</span>
+                        </div>
+                        <div class="shortcut-card">
+                            <div class="shortcut-icon">💬</div>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="shortcut-card">
+                            <div class="shortcut-icon">📰</div>
+                            <span>Reddit</span>
+                        </div>
+                        <div class="shortcut-card">
+                            <div class="shortcut-icon">🛒</div>
+                            <span>Amazon</span>
+                        </div>
+                        <div class="shortcut-card">
+                            <div class="shortcut-icon">📧</div>
+                            <span>Gmail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <div class="feature-card">
+                        <h4>🔒 Приватность</h4>
+                        <p>Защита ваших данных и приватности в интернете</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>⚡ Скорость</h4>
+                        <p>Быстрая загрузка страниц и отзывчивый интерфейс</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🛡️ Безопасность</h4>
+                        <p>Продвинутая защита от вредоносного ПО</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Статус бар -->
+        <div class="status-bar">
+            <div class="status-info">
+                <span class="connection-status">🔒 Безопасное соединение</span>
+                <span class="page-info">| nokssss v1.0.0</span>
+            </div>
+            <div class="zoom-controls">
+                <button class="zoom-btn">-</button>
+                <span class="zoom-level">100%</span>
+                <button class="zoom-btn">+</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

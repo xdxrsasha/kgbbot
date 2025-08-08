@@ -1,0 +1,41 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="neonGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4dff73;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00ff41;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00cc33;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Черный фон -->
+  <rect width="32" height="32" fill="#000000" rx="6"/>
+  
+  <!-- Неоновая рамка -->
+  <rect x="2" y="2" width="28" height="28" fill="none" stroke="url(#neonGradient)" stroke-width="1" rx="4" filter="url(#glow)"/>
+  
+  <!-- Буква N -->
+  <path d="M 8 10 L 8 22 M 8 10 L 15 22 M 15 10 L 15 22" 
+        stroke="url(#neonGradient)" 
+        stroke-width="1.5" 
+        fill="none" 
+        stroke-linecap="round" 
+        filter="url(#glow)"/>
+  
+  <!-- Буква K -->
+  <path d="M 18 10 L 18 22 M 18 16 L 24 10 M 18 16 L 24 22" 
+        stroke="url(#neonGradient)" 
+        stroke-width="1.5" 
+        fill="none" 
+        stroke-linecap="round" 
+        filter="url(#glow)"/>
+  
+  <!-- Точка в центре как акцент -->
+  <circle cx="16" cy="16" r="1" fill="url(#neonGradient)" filter="url(#glow)"/>
+</svg>
