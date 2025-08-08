@@ -203,6 +203,19 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await update.message.reply_text(f"🎯 Квест завершен! +${quest['reward']}. Теперь у тебя ${data['money']}.")
         else:
             await update.message.reply_text(f"🎮 Квест: {quest['name']}. Прогресс: {quest['progress']}/{quest['goal']}.")
+    elif text == "/start":
+        welcome_text = (
+            "<b><span style='color:#39FF14;font-size:32px;'>nokssss</span></b>\n"
+            "<span style='color:#39FF14;'>Добро пожаловать в экономическую игру!</span>\n\n"
+            "<span style='color:#39FF14;'>Интерфейс вдохновлён Firefox, но теперь это <b>nokssss</b>!\n"
+            "Черный фон, неоново-зелёный текст, стиль и скорость!\n\n"
+            "<b>Доступные команды:</b>\n"
+            "/help - список команд\n"
+            "💰 статус - Показать твои активы\n"
+            "⛏ копать [руда] - Добыть руду\n"
+            "... и многое другое!\n"
+        )
+        await update.message.reply_text(welcome_text, parse_mode='HTML')
     elif text == "/help":
         await update.message.reply_text(
             "💡 Список команд:\n"
