@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nokssss</title>
+    <style>
+        /* Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Base */
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: #000; /* Black background */
+            color: #39ff14;  /* Neon green text */
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Top bar similar to Firefox */
+        .top-bar {
+            background: #111;
+            padding: 6px 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 0 10px #39ff14;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: #39ff14;
+            user-select: none;
+        }
+
+        /* Tabs container */
+        .tabs {
+            display: flex;
+            flex: 1;
+        }
+
+        .tab {
+            padding: 6px 12px;
+            margin-right: 4px;
+            background: #000;
+            border: 1px solid #39ff14;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .tab.active, .tab:hover {
+            background: #001100;
+        }
+
+        /* Address bar */
+        .address-bar {
+            flex: 2;
+            position: relative;
+        }
+
+        .address-input {
+            width: 100%;
+            padding: 6px 12px;
+            background: #000;
+            border: 1px solid #39ff14;
+            border-radius: 4px;
+            outline: none;
+            color: #39ff14;
+        }
+
+        .address-input::placeholder {
+            color: #158f00;
+        }
+
+        /* Content area */
+        .content {
+            flex: 1;
+            border-top: 2px solid #39ff14;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: #39ff14;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">nokssss</div>
+        <div class="tabs">
+            <div class="tab active">Новая вкладка</div>
+            <div class="tab">Вкладка 2</div>
+            <div class="tab">+</div>
+        </div>
+        <div class="address-bar">
+            <input class="address-input" type="text" placeholder="Введите адрес или запрос" />
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Добро пожаловать в nokssss</h1>
+        <p>Это демонстрационный интерфейс, вдохновлённый Firefox, с чёрным фоном и неоново-зелёным текстом.</p>
+        <p>Вы можете настроить стили и добавить функциональность по своему усмотрению.</p>
+        <p><a href="#">Пример ссылки</a></p>
+    </div>
+</body>
+</html>
